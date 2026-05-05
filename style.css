@@ -156,6 +156,13 @@ h2 {
     align-items: center;
 }
 
+/* --- Floating Animation --- */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
 .css-art-profile {
     width: 280px;
     height: 360px;
@@ -168,11 +175,34 @@ h2 {
     align-items: center;
     position: relative;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+    animation: float 6s ease-in-out infinite;
 }
 
 .css-art-profile:hover {
+    animation-play-state: paused;
     transform: translateY(-15px) scale(1.02) rotate(-2deg);
     box-shadow: 0 30px 60px rgba(0,0,0,0.15), inset 0 0 30px rgba(0,0,0,0.05);
+}
+
+/* --- Scroll-in Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    padding: 100px 0;
+    animation: fadeInUp 1s ease-out both;
+}
+
+section:nth-child(even) {
+    animation-delay: 0.2s;
 }
 
 .cameo-inner {
@@ -259,23 +289,28 @@ h2 {
     padding: 25px;
     background: var(--white);
     border: 3px solid var(--light-blue-dark);
-    border-radius: 15px;
     box-shadow: 8px 8px 0 var(--pale-purple);
     transition: transform 0.3s ease;
-}
-
-.sign:hover {
-    transform: scale(1.05);
 }
 
 .sign.left {
     float: left;
     text-align: right;
+    border-radius: 15px 0 0 15px;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    padding-right: 40px;
 }
 
 .sign.right {
     float: right;
     text-align: left;
+    border-radius: 0 15px 15px 0;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
+    padding-left: 40px;
+}
+
+.sign:hover {
+    transform: scale(1.05) rotate(1deg);
 }
 
 .sign::after {
