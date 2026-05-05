@@ -1,0 +1,351 @@
+:root {
+    --light-blue: #89CFF0; /* Alice Dress */
+    --light-blue-dark: #6CB4D8;
+    --white: #FFFFFF;      /* Apron */
+    --platinum-blonde: #FDF5E6; /* Hair/Accent */
+    --pale-purple: #E6E6FA; /* Shadows/Magic */
+    --text-dark: #2A2A2A;
+    --text-muted: #5A5A5A;
+    --container-max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Decorative Lace Border --- */
+.lace-border {
+    height: 30px;
+    background-image: radial-gradient(circle at 15px 0, transparent 15px, var(--white) 16px);
+    background-size: 30px 30px;
+    background-repeat: repeat-x;
+    position: relative;
+    z-index: 10;
+}
+
+.lace-bottom {
+    background-image: radial-gradient(circle at 15px 30px, transparent 15px, var(--white) 16px);
+    margin-top: -30px;
+}
+
+/* --- Header & Nav --- */
+header {
+    background: var(--light-blue);
+    padding: 20px 0 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--white);
+    text-shadow: 2px 2px 0px var(--light-blue-dark);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: var(--platinum-blonde);
+}
+
+/* --- Sections --- */
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--light-blue-dark);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--light-blue);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: var(--white);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: var(--platinum-blonde);
+    font-style: italic;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+/* CSS Art: Profile Cameo */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-art-profile {
+    width: 280px;
+    height: 360px;
+    background: radial-gradient(circle, var(--white) 30%, var(--pale-purple) 100%);
+    border-radius: 140px 140px 140px 140px / 180px 180px 180px 180px; /* Oval */
+    border: 12px solid var(--platinum-blonde);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 30px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cameo-inner {
+    font-family: 'Playfair Display', serif;
+    font-size: 10rem;
+    color: var(--light-blue);
+    text-shadow: 4px 4px 0 var(--platinum-blonde);
+}
+
+.ribbon-tail {
+    position: absolute;
+    bottom: -40px;
+    width: 200px;
+    height: 60px;
+    background: var(--pale-purple);
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 80% 80%, 50% 100%, 20% 80%, 0% 100%);
+    z-index: -1;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ribbon-btn {
+    background-color: var(--white);
+    color: var(--light-blue-dark);
+    box-shadow: 0 6px 0 var(--pale-purple);
+    border: 2px solid var(--pale-purple);
+}
+
+.ribbon-btn:hover {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 var(--pale-purple);
+    background-color: var(--platinum-blonde);
+}
+
+/* --- About Section --- */
+.about {
+    background-color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skills ul li {
+    background: var(--pale-purple);
+    color: var(--light-blue-dark);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px dashed var(--white);
+    box-shadow: 0 0 0 4px var(--pale-purple);
+}
+
+/* --- Projects Section --- */
+.projects {
+    background-color: var(--pale-purple);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid var(--platinum-blonde);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+}
+
+.css-art-project {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.suit {
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+/* Card Patterns */
+.card-spade {
+    background: repeating-linear-gradient(45deg, var(--light-blue), var(--light-blue) 10px, var(--white) 10px, var(--white) 20px);
+    color: var(--text-dark);
+}
+
+.card-heart {
+    background-color: var(--white);
+    background-image: radial-gradient(var(--platinum-blonde) 15%, transparent 16%),
+                      radial-gradient(var(--platinum-blonde) 15%, transparent 16%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    color: #FF6B6B;
+}
+
+.card-diamond {
+    background: conic-gradient(var(--pale-purple) 90deg, var(--white) 90deg 180deg, var(--pale-purple) 180deg 270deg, var(--white) 270deg);
+    background-size: 40px 40px;
+    color: #FF6B6B;
+}
+
+.project-info {
+    padding: 25px;
+    text-align: center;
+}
+
+/* --- Contact Section --- */
+.contact {
+    background-color: var(--platinum-blonde);
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 50px 0;
+    text-align: center;
+    background: var(--white);
+    color: var(--light-blue-dark);
+    font-weight: 600;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero-content, .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hero-visual {
+        margin-top: 50px;
+    }
+}
