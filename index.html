@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice's Portfolio in Wonderland</title>
+    <title>朝日なずな (NazunaAsahi) - AWS Serverless Project Manager Portfolio</title>
+    <meta name="description" content="朝日なずな (NazunaAsahi) のポートフォリオ。3年の経験を持つAWS Serverless Project Managerとして、Security, Compliance, Cloud Infrastructureを専門としています。">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) for SEO/AIO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "朝日なずな",
+      "alternateName": "NazunaAsahi",
+      "jobTitle": "AWS Serverless Project Manager",
+      "description": "AWS Serverless Project Manager with 3 years of experience specializing in Security, Compliance, and Cloud Infrastructure.",
+      "url": "https://NazunaAsahi.github.io/my-alice-portfolio/",
+      "sameAs": [
+        "https://github.com/NazunaAsahi",
+        "https://x.com/NazunaAsahi",
+        "https://note.com/nazuna_sj0124"
+      ],
+      "knowsAbout": [
+        "AWS Serverless",
+        "Cloud Security",
+        "Compliance",
+        "Cloud Infrastructure",
+        "Project Management"
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="logo">Wonderland</div>
+        <nav class="container" aria-label="メインナビゲーション">
+            <div class="logo" translate="no">Wonderland</div>
             <ul>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">Story</a></li>
                 <li><a href="#projects">Gallery</a></li>
                 <li><a href="#contact">Tea Party</a></li>
@@ -23,16 +50,20 @@
     </header>
 
     <main>
-        <section id="hero" class="hero">
+        <section id="hero" class="hero" aria-label="ヒーローセクション">
             <div class="container hero-content">
-                <div class="hero-text">
+                <article class="hero-text">
                     <h1>ようこそ、<span>不思議の国</span>のポートフォリオへ。</h1>
-                    <p>画像を使わず、CSSの魔法だけで紡がれたアリスの世界観です。</p>
-                    <a href="#projects" class="btn ribbon-btn">ギャラリーを見る</a>
-                </div>
-                <div class="hero-visual">
+                    <p><strong>朝日なずな (NazunaAsahi)</strong><br>
+                    AWS Serverless Project Manager (3 years exp.)<br>
+                    Specializing in Security, Compliance, and Infrastructure.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn ribbon-btn">ギャラリーを見る</a>
+                    </div>
+                </article>
+                <div class="hero-visual" aria-hidden="true">
                     <div class="css-art-profile">
-                        <div class="cameo-inner">A</div>
+                        <div class="cameo-inner">N</div>
                     </div>
                     <div class="ribbon-tail"></div>
                 </div>
@@ -40,68 +71,79 @@
             <div class="lace-border lace-bottom"></div>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about" aria-labelledby="about-heading">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 id="about-heading">About Me</h2>
                 <div class="about-grid">
-                    <div class="about-text">
-                        <p>プラチナブロンド、水色、薄い紫を基調としたデザインです。エプロンのフリルやリボンをCSSのグラデーションと形状のみで表現しています。モダンな技術とファンタジーな世界観を融合させるのが得意です。</p>
-                    </div>
-                    <div class="skills">
-                        <h3>Magic Tools</h3>
+                    <article class="about-text">
+                        <p>朝日なずなです。AWSサーバーレスプロジェクトマネージャーとして3年のキャリアを持ち、特にセキュリティとコンプライアンスを重視したクラウドインフラ構築を得意としています。</p>
+                        <p>このポートフォリオは、プラチナブロンド、水色、薄い紫を基調とし、エプロンのフリルやリボンをCSSのみで表現した「不思議の国」の世界観で構築されています。</p>
+                    </article>
+                    <aside class="skills" aria-labelledby="skills-heading">
+                        <h3 id="skills-heading">Expertise & Tools</h3>
                         <ul>
-                            <li>CSS Gradients</li>
-                            <li>Clip-path</li>
-                            <li>Pseudo-elements</li>
-                            <li>Box Shadows</li>
+                            <li>AWS Serverless</li>
+                            <li>Cloud Security</li>
+                            <li>Compliance</li>
+                            <li>Infrastructure as Code</li>
+                            <li>CSS Art</li>
                         </ul>
-                    </div>
+                    </aside>
                 </div>
             </div>
             <div class="lace-border lace-bottom"></div>
         </section>
 
-        <section id="projects" class="projects">
+        <section id="projects" class="projects" aria-labelledby="projects-heading">
             <div class="container">
-                <h2>Gallery</h2>
+                <h2 id="projects-heading">Gallery</h2>
                 <div class="project-grid">
-                    <div class="project-card">
-                        <div class="css-art-project card-spade">
+                    <article class="project-card">
+                        <div class="css-art-project card-spade" aria-hidden="true">
                             <div class="suit">♠</div>
                         </div>
                         <div class="project-info">
-                            <h3>Spade Project</h3>
-                            <p>ストライプのパターンを背景に使用したプロジェクトカードです。</p>
+                            <h3>Security First</h3>
+                            <p>コンプライアンスを重視したセキュアなインフラ設計プロジェクト。</p>
                         </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="css-art-project card-heart">
+                    </article>
+                    <article class="project-card">
+                        <div class="css-art-project card-heart" aria-hidden="true">
                             <div class="suit">♥</div>
                         </div>
                         <div class="project-info">
-                            <h3>Heart Project</h3>
-                            <p>ポルカドットのパターンを背景に使用したプロジェクトカードです。</p>
+                            <h3>Serverless Magic</h3>
+                            <p>AWS Lambdaを中心とした大規模サーバーレスアーキテクチャの構築。</p>
                         </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="css-art-project card-diamond">
+                    </article>
+                    <article class="project-card">
+                        <div class="css-art-project card-diamond" aria-hidden="true">
                             <div class="suit">♦</div>
                         </div>
                         <div class="project-info">
-                            <h3>Diamond Project</h3>
-                            <p>市松模様のパターンを背景に使用したプロジェクトカードです。</p>
+                            <h3>Cloud Compliance</h3>
+                            <p>金融機関レベルの厳格なコンプライアンス要件を満たすクラウド運用。</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
             <div class="lace-border lace-bottom"></div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
             <div class="container">
-                <h2>Tea Party</h2>
+                <h2 id="contact-heading">Tea Party</h2>
                 <p>新しい冒険の始まりについて、お茶を飲みながらお話ししましょう。</p>
-                <div class="contact-links">
+                
+                <nav class="sns-links" aria-label="ソーシャルメディアリンク">
+                    <ul>
+                        <li><a href="https://github.com/NazunaAsahi" target="_blank" rel="noopener noreferrer" class="sns-item">GitHub</a></li>
+                        <li><a href="https://x.com/NazunaAsahi" target="_blank" rel="noopener noreferrer" class="sns-item">X (Twitter)</a></li>
+                        <li><a href="https://note.com/nazuna_sj0124" target="_blank" rel="noopener noreferrer" class="sns-item">note</a></li>
+                    </ul>
+                </nav>
+
+                <div class="contact-actions">
                     <a href="mailto:alice@example.com" class="btn ribbon-btn">手紙を送る</a>
                 </div>
             </div>
@@ -110,7 +152,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Alice in CSS Wonderland. Made with code & curiosity.</p>
+            <div class="footer-content">
+                <p>&copy; 2026 NazunaAsahi (朝日なずな). Inspired by Alice in Wonderland.</p>
+                <nav class="footer-sns" aria-label="フッターソーシャルリンク">
+                    <a href="https://github.com/NazunaAsahi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://x.com/NazunaAsahi" target="_blank" rel="noopener noreferrer">X</a>
+                    <a href="https://note.com/nazuna_sj0124" target="_blank" rel="noopener noreferrer">note</a>
+                </nav>
+            </div>
         </div>
     </footer>
 </body>
